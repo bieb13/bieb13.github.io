@@ -1,0 +1,285 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>拖稿的Nobelium使用体验  | Bie哔哔</title>
+<link rel="shortcut icon" href="https://bieb13.github.io//favicon.ico?v=1618233170357">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://bieb13.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="拖稿的Nobelium使用体验  | Bie哔哔 - Atom Feed" href="https://bieb13.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVTCT159E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VLVTCT159E');
+</script>
+
+
+    <meta name="description" content="拖稿的Nobelium使用体验
+之所以没敢写'教程'二字，是因为其实我也是在摸索中。自己都是半桶水，哪里敢教人。
+不过为了📝记录，里面也会有简单的部署教程，也是为了自我备忘。
+仓库介绍
+仓库地址
+该项目非常适合notion用户，当然如果你..." />
+    <meta name="keywords" content="nobelium,notion" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://bieb13.github.io/">
+  <img class="avatar" src="https://bieb13.github.io//images/avatar.png?v=1618233170357" alt="">
+  </a>
+  <h1 class="site-title">
+    Bie哔哔
+  </h1>
+  <p class="site-description">
+    小声哔哔 放声大笑
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              拖稿的Nobelium使用体验 
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-07
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://bieb13.github.io/Di7t1-jA7/" class="post-tag">
+                  # nobelium
+                </a>
+              
+                <a href="https://bieb13.github.io/vJjGvxQO2L/" class="post-tag">
+                  # notion
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="拖稿的nobelium使用体验">拖稿的Nobelium使用体验</h1>
+<p>之所以没敢写'教程'二字，是因为其实我也是在摸索中。自己都是半桶水，哪里敢教人。<br>
+不过为了📝记录，里面也会有简单的部署教程，也是为了自我备忘。</p>
+<h2 id="仓库介绍">仓库介绍</h2>
+<p><a href="https://github.com/craigary/nobelium/">仓库地址</a><br>
+该项目非常适合notion用户，当然如果你没有用过notion，同样简单!<br>
+只要去注册一个notion账号，你同样可以10分钟完成✅网站的部署。<br>
+且因为它是部署在vercel上的，所以非常适合国内访问！<br>
+在此感谢@craigary</p>
+<h2 id="前期准备">前期准备</h2>
+<ul>
+<li>Github账号</li>
+<li>Notion账号</li>
+<li>Vercel账号</li>
+<li>一个域名(非必需，但是当然是自己指定域名更漂亮啦）</li>
+</ul>
+<h3 id="开始">开始</h3>
+<ul>
+<li>
+<p>将 <a href="https://www.notion.so/68be9021bca34b8e89f0246f27e608df">这个 Notion 模板</a> 制作副本，设置share状态让所有人都能看到它！</p>
+</li>
+<li>
+<p><a href="https://github.com/craigary/nobelium/fork">Fork</a> 这个项目</p>
+</li>
+<li>
+<p>在GitHub仓库里的 <code>blog.config.js</code> 配置相关选项</p>
+</li>
+<li>
+<p><em>(可选)</em> 用自己的图片替换 <code>/public</code> 文件夹里的 <code>avatar.svg</code>、<code>favicon.svg</code> 和 <code>favicon.ico</code></p>
+</li>
+<li>
+<p>登录vercel在 <a href="https://vercel.com">Vercel</a> ，新建一个项目</p>
+<ul>
+<li>选择nobelium仓库点击import,  <img src="https://bieb13.github.io//post-images/1617788264181.png" alt="" loading="lazy"></li>
+<li>选择个人账户，设定一个环境变量<code>NOTION_PAGE_ID</code>：<br>
+<img src="https://bieb13.github.io//post-images/1617788826399.png" alt="" loading="lazy">
+<ul>
+<li><code>NOTION_PAGE_ID</code>: 你刚刚分享的 Notion 页面网址中的页面 ID，通常是网址中工作区地址后的 32 位字符串，如图，千万别弄错哦！<br>
+<img src="https://bieb13.github.io//post-images/1617787577269.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>点击Deploy<img src="https://bieb13.github.io//post-images/1617788485474.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>
+<p><strong>成功部署！</strong> vercel会出现撒花并且成功展示的页面哦！部署成功后返回，可以看到项目的ready状态<img src="https://bieb13.github.io//post-images/1617789312508.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>vercel支持绑定域名，点击这个项目的setting里的Domain，前去绑定域名即可。<img src="https://bieb13.github.io//post-images/1617789266209.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>如果想增加评论区，支持gitalk，<a href="https://bieb13.com/gitalkinnob">请点击这里扩展阅读</a></p>
+</li>
+<li>
+<p>后期更新文章，只需要去刚刚分享的notion页面里添加即可，属性里的published标签即是发布的意思。<img src="https://bieb13.github.io//post-images/1617788608330.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<hr>
+<p>展示一下我利用nobelium搭建的页面效果<img src="https://bieb13.github.io//post-images/1617789399729.png" alt="" loading="lazy"></p>
+<p><em>转载请附带原文链接，谢谢！</em><br>
+<a href="https://bieb13.com/nobelium">https://bieb13.com/nobelium</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E6%8B%96%E7%A8%BF%E7%9A%84nobelium%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C">拖稿的Nobelium使用体验</a>
+<ul>
+<li><a href="#%E4%BB%93%E5%BA%93%E4%BB%8B%E7%BB%8D">仓库介绍</a></li>
+<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a>
+<ul>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://bieb13.github.io/freenom/">
+              <h3 class="post-title">
+                Freenom免费域名注册
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c50672b6f30ceb584942',
+    clientSecret: 'ca38bddd2a030f421e292bfb7f21fd7345bcb2fd',
+    repo: 'gride',
+    owner: 'bieb13',
+    admin: ['bieb13'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Made by <a href="https://github.com/bieb13/bieb13"_blank">Bieb13</a>
+  <a class="rss" href="https://bieb13.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

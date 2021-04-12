@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bieb13.github.io/</id>
+    <title>Bie哔哔</title>
+    <updated>2021-04-12T13:13:01.629Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://bieb13.github.io/"/>
+    <link rel="self" href="https://bieb13.github.io/atom.xml"/>
+    <subtitle>小声哔哔 放声大笑</subtitle>
+    <logo>https://bieb13.github.io/images/avatar.png</logo>
+    <icon>https://bieb13.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, Bie哔哔</rights>
+    <entry>
+        <title type="html"><![CDATA[一键搭建tg mtproxy]]></title>
+        <id>https://bieb13.github.io/mtproxy/</id>
+        <link href="https://bieb13.github.io/mtproxy/">
+        </link>
+        <updated>2021-04-12T04:12:21.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>前提:你得有一个vps</p>
+</blockquote>
+<p>某人白嫖谷歌云，因为自己也是新手，没怎么用gcp只是开了几台小🐔给朋友玩玩，现在只剩两个月的时间了，送的体验金还有二百多刀，用来折腾一下，顺便学习一下。</p>
+<p>原文仓库地址：<a href="https://github.com/ellermister/mtproxy">https://github.com/ellermister/mtproxy</a></p>
+<blockquote>
+<p>我的vps是utuban系统，且装了宝塔面板</p>
+</blockquote>
+<p>所以操作非常简单，连接到SSH后</p>
+<p>一键代码输入</p>
+<pre><code class="language-markdown">mkdir /home/mtproxy &amp;&amp; cd /home/mtproxy
+curl -s -o mtproxy.sh https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh &amp;&amp; chmod +x mtproxy.sh &amp;&amp; bash mtproxy.sh
+</code></pre>
+<ul>
+<li>
+<p>对了因为我装了宝塔面板，所以默认的443和8888端口已经被占用，所以要记得在宝塔-安全里 新增两个端口放行，备注方便自己记忆就行(端口一会儿会用到)</p>
+</li>
+<li>
+<p>根据提示选择输入指定 端口(刚刚放行的端口)</p>
+</li>
+<li>
+<p>如果没有特殊需求，一路默认下去就行</p>
+</li>
+<li>
+<p>当当当！成功安装并且运行（下图是脚本作者图例）</p>
+<figure data-type="image" tabindex="1"><img src="https://besthope.ml/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F801fbedb-ea67-4afc-b8f8-b90ee515fb22%2FUntitled.png?table=block&amp;id=49a37f30-78db-4a84-ae36-d3302cc6b6a0&amp;width=1440&amp;userId=&amp;cache=v2" alt="01.png" loading="lazy"></figure>
+</li>
+<li>
+<p>如果想卸载也非常简单 直接rm 该文件的所在目录即可</p>
+</li>
+<li>
+<p>我输出后的链接，发现无法直接使用的，然后发现去tg代理里手动添加即可，把主机IP地址，端口填写进去，MTProxy Secrect填进去。成功保存，连接，分享。完美</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://besthope.ml/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2f8eab90-464a-4f5e-991d-e8475d2131a8%2FUntitled.png?table=block&amp;id=0666b26f-962c-45ed-ac52-2e514da08fa2&amp;width=970&amp;userId=&amp;cache=v2" alt="02.png" loading="lazy"></figure>
+<ul>
+<li>🥰</li>
+<li><em>转载请附带原文链接 谢谢</em> <a href="https://bieb13.com/mtproxy">https://bieb13.com/mtproxy</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[超简单在Nobelium添加Gitalk评论系统]]></title>
+        <id>https://bieb13.github.io/gitalkinnob/</id>
+        <link href="https://bieb13.github.io/gitalkinnob/">
+        </link>
+        <updated>2021-04-09T03:05:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="超简单超简单超简单">超简单！超简单！超简单！</h2>
+<p>因为作者已经提前在博客系统里帮我们安装好了Gitalk，所以我们需要做的就是<br>
+<strong>补充<code>blog.config.js</code>文件里这些数据就可以了！</strong><br>
+<img src="https://bieb13.github.io//post-images/1617937851381.jpg" alt="" loading="lazy"><br>
+<img src="https://bieb13.github.io//post-images/1617943064786.png" alt="" loading="lazy"></p>
+<h3 id="上图的数据如何获得呢">上图的数据如何获得呢？</h3>
+<ul>
+<li>创建一个公共github仓库,记住这个仓库名，我的是 <code>nob</code><br>
+<img src="https://bieb13.github.io//post-images/1617941453567.png" alt="" loading="lazy"></li>
+<li>创建一个GitHub Application，<a href="https://github.com/settings/applications/new">请点击这里</a>，生成<code>client id</code>和<code>client secret</code><br>
+<img src="https://bieb13.github.io//post-images/1617949445676.png" alt="" loading="lazy"><br>
+<img src="https://bieb13.github.io//post-images/1617942344470.png" alt="" loading="lazy"><br>
+<img src="https://bieb13.github.io//post-images/1617942583213.png" alt="" loading="lazy"></li>
+<li>返回你的nobelium的仓库将<code>blog.config.js</code>补充好<br>
+<img src="https://bieb13.github.io//post-images/1617943064786.png" alt="" loading="lazy"><br>
+一定记得<code>repo</code>那里不要多写，不要傻乎乎把整个仓库地址都填进去</li>
+</ul>
+<h3 id="配置完毕">配置完毕</h3>
+<p>刷新你的主页，查看评论是否配置成功。有时会出现下图<br>
+<img src="https://bieb13.github.io//post-images/1617943305806.png" alt="" loading="lazy"><br>
+我也不知道这是啥bug，我是登录了一下自己的GitHub后就变正常了。<br>
+对了你的网页地址不要设置过长，不然也会出现bug.<br>
+现在咱也是博客有评论系统的人了~撒花💐🌺<br>
+转载请附带原文链接，谢谢！<a href="https://bieb13.com/gitalkinnob">https://bieb13.com/gitalkinnob</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[拖稿的Nobelium使用体验 ]]></title>
+        <id>https://bieb13.github.io/nobelium1/</id>
+        <link href="https://bieb13.github.io/nobelium1/">
+        </link>
+        <updated>2021-04-07T09:11:17.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="拖稿的nobelium使用体验">拖稿的Nobelium使用体验</h1>
+<p>之所以没敢写'教程'二字，是因为其实我也是在摸索中。自己都是半桶水，哪里敢教人。<br>
+不过为了📝记录，里面也会有简单的部署教程，也是为了自我备忘。</p>
+<h2 id="仓库介绍">仓库介绍</h2>
+<p><a href="https://github.com/craigary/nobelium/">仓库地址</a><br>
+该项目非常适合notion用户，当然如果你没有用过notion，同样简单!<br>
+只要去注册一个notion账号，你同样可以10分钟完成✅网站的部署。<br>
+且因为它是部署在vercel上的，所以非常适合国内访问！<br>
+在此感谢@craigary</p>
+<h2 id="前期准备">前期准备</h2>
+<ul>
+<li>Github账号</li>
+<li>Notion账号</li>
+<li>Vercel账号</li>
+<li>一个域名(非必需，但是当然是自己指定域名更漂亮啦）</li>
+</ul>
+<h3 id="开始">开始</h3>
+<ul>
+<li>
+<p>将 <a href="https://www.notion.so/68be9021bca34b8e89f0246f27e608df">这个 Notion 模板</a> 制作副本，设置share状态让所有人都能看到它！</p>
+</li>
+<li>
+<p><a href="https://github.com/craigary/nobelium/fork">Fork</a> 这个项目</p>
+</li>
+<li>
+<p>在GitHub仓库里的 <code>blog.config.js</code> 配置相关选项</p>
+</li>
+<li>
+<p><em>(可选)</em> 用自己的图片替换 <code>/public</code> 文件夹里的 <code>avatar.svg</code>、<code>favicon.svg</code> 和 <code>favicon.ico</code></p>
+</li>
+<li>
+<p>登录vercel在 <a href="https://vercel.com">Vercel</a> ，新建一个项目</p>
+<ul>
+<li>选择nobelium仓库点击import,  <img src="https://bieb13.github.io//post-images/1617788264181.png" alt="" loading="lazy"></li>
+<li>选择个人账户，设定一个环境变量<code>NOTION_PAGE_ID</code>：<br>
+<img src="https://bieb13.github.io//post-images/1617788826399.png" alt="" loading="lazy">
+<ul>
+<li><code>NOTION_PAGE_ID</code>: 你刚刚分享的 Notion 页面网址中的页面 ID，通常是网址中工作区地址后的 32 位字符串，如图，千万别弄错哦！<br>
+<img src="https://bieb13.github.io//post-images/1617787577269.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>点击Deploy<img src="https://bieb13.github.io//post-images/1617788485474.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>
+<p><strong>成功部署！</strong> vercel会出现撒花并且成功展示的页面哦！部署成功后返回，可以看到项目的ready状态<img src="https://bieb13.github.io//post-images/1617789312508.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>vercel支持绑定域名，点击这个项目的setting里的Domain，前去绑定域名即可。<img src="https://bieb13.github.io//post-images/1617789266209.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>如果想增加评论区，支持gitalk，<a href="https://bieb13.com/gitalkinnob">请点击这里扩展阅读</a></p>
+</li>
+<li>
+<p>后期更新文章，只需要去刚刚分享的notion页面里添加即可，属性里的published标签即是发布的意思。<img src="https://bieb13.github.io//post-images/1617788608330.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<hr>
+<p>展示一下我利用nobelium搭建的页面效果<img src="https://bieb13.github.io//post-images/1617789399729.png" alt="" loading="lazy"></p>
+<p><em>转载请附带原文链接，谢谢！</em><br>
+<a href="https://bieb13.com/nobelium">https://bieb13.com/nobelium</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Freenom免费域名注册]]></title>
+        <id>https://bieb13.github.io/freenom/</id>
+        <link href="https://bieb13.github.io/freenom/">
+        </link>
+        <updated>2021-04-07T05:40:43.000Z</updated>
+        <content type="html"><![CDATA[<p>Freenom提供免费域名注册，域名后缀一般为.ga或者.ml，适合刚开始尝试建站的朋友。本站的备用站bieb13.ml即是通过freenom获得。</p>
+<blockquote>
+<p>💡<br>
+值得注意的是，你只有域名的使用权，所以名义上所有权依然是Freenom。<br>
+若你的域名过期没有及时续期， 会被freenom收回。<br>
+据说freenom会在域名到期两周前提醒你续费，注查收邮箱。这样理论上可以无限期使用。</p>
+</blockquote>
+<h3 id="下面是域名获取教程">下面是域名获取教程:</h3>
+<details>
+   <summary>准备: </summary>
+<ul>
+<li>稳定的科学上网环境</li>
+<li>一个电子邮箱(最好是谷歌邮箱)</li>
+</ul>
+</details>     
+<hr>
+<details>
+   <summary>开始: </summary>
+<p>1.打开freenom主页<a href="https://bieb13.com/notioncustomizepases">https://bieb13.com/notioncustomizepases</a><br>
+2. 输入一个你想要的域名前缀，检查可用性。看到Free标签的都是免费可用的点击Get it now！<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd2cec5f5-9e70-4469-9ba1-508569e9f3c5%2FUntitled.png?table=block&amp;id=688571a3-9ba1-45c4-bc0d-8b9e506065eb&amp;cache=v2" alt="1" loading="lazy"><br>
+3. 点击Checkout进入购物车<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffdc4c698-265e-420e-8a03-2474b0e09add%2FUntitled.png?table=block&amp;id=9aa498c9-9d6d-405c-92f0-8087c0a16aa2&amp;cache=v2" alt="2" loading="lazy"><br>
+4. 选择12 Months Free并点击Continue<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F257b9a15-046e-4af2-aa78-2f5eb1b43ebd%2FUntitled.png?table=block&amp;id=dffc05e4-62a7-4af9-9c6e-73f78f0033c1&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/257b9a15-046e-4af2-aa78-2f5eb1b43ebd/Untitled.png" loading="lazy"><br>
+5. 输入你的谷歌邮箱并点击验证。去你的邮箱里找到验证链接并点击<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffaae39dc-4359-4d32-8d05-e5d2c1c68955%2FUntitled.png?table=block&amp;id=965b2d49-2c53-4b41-a052-d1f577256df4&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/faae39dc-4359-4d32-8d05-e5d2c1c68955/Untitled.png" loading="lazy"><br>
+6. 登录界面重置密码，然后登录。<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffbe40bcc-8ec7-4337-b1a2-f2bac077eab9%2FUntitled.png?table=block&amp;id=d9a5b77d-6e3f-417e-a026-5668fa1ebd2b&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fbe40bcc-8ec7-4337-b1a2-f2bac077eab9/Untitled.png" loading="lazy"><br>
+7. 登录成功。点击自己的用户名选择Edit Account Details先修改自己的账号信息，<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faa8eff80-1f60-4f4b-9e26-cda61109aa4b%2FUntitled.png?table=block&amp;id=bc91b29c-cbfb-4f1e-8222-fa2af34b151a&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa8eff80-1f60-4f4b-9e26-cda61109aa4b/Untitled.png" loading="lazy"><br>
+8.  地址去谷歌地图找一个。注意你的科学上网ip要和账号地址一致，不然容易交易失败。在此建议用🇺🇸ip。填完后保存<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd32386ad-a142-428e-aff1-d1e85854abcb%2FUntitled.png?table=block&amp;id=08ecf59d-902c-4f98-938a-3f8ede9524c8&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d32386ad-a142-428e-aff1-d1e85854abcb/Untitled.png" loading="lazy"><br>
+9.  地址去谷歌地图找一个。注意你的科学上网ip要和账号地址一致，不然容易交易失败。在此建议用🇺🇸ip。填完后保存<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd32386ad-a142-428e-aff1-d1e85854abcb%2FUntitled.png?table=block&amp;id=84f32789-b8b3-49e3-b56d-68ea79ef7117&amp;cache=v2" alt="9.png" loading="lazy"></p>
+<ol start="10">
+<li>
+<p>返回购物车🛒点击完成交易。</p>
+<figure data-type="image" tabindex="1"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6c6ba224-6098-4be6-be51-0a15399c765e%2FUntitled.png?table=block&amp;id=ee8da944-aae6-4628-b0ec-0f2dc478a3be&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c6ba224-6098-4be6-be51-0a15399c765e/Untitled.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F82f08058-538e-49e4-938b-aa416968e823%2FUntitled.png?table=block&amp;id=c0caba27-65d3-4fce-ba64-8fe95fd32c2e&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/82f08058-538e-49e4-938b-aa416968e823/Untitled.png" loading="lazy"></figure>
+</li>
+<li>
+<p>交易成功后会出现订单确认。</p>
+<figure data-type="image" tabindex="3"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4f5796ce-c7a9-41ae-8772-5edf93ac4542%2FUntitled.png?table=block&amp;id=de5227c4-639d-41a2-bab3-948ffcdcdc9a&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4f5796ce-c7a9-41ae-8772-5edf93ac4542/Untitled.png" loading="lazy"></figure>
+</li>
+<li>
+<p>点击Service-My Domains，就可以看到刚刚购买成功的域名了！</p>
+<figure data-type="image" tabindex="4"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2d6bffce-11fb-44df-b7b7-716261e982fc%2FUntitled.png?table=block&amp;id=4792fa4a-5dd6-496c-855d-f014cc909291&amp;cache=v2" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d6bffce-11fb-44df-b7b7-716261e982fc/Untitled.png" loading="lazy"></figure>
+</li>
+</ol>
+</details>
+<hr>
+<h3 id="给域名添加dns解析">给域名添加DNS解析</h3>
+<p><em>推荐使用Cloudflare，免费且注册简单，且功能足够使用。</em></p>
+<details>
+   <summary>开始</summary>
+<ul>
+<li>
+<p>1.登录你的Freenom账号，点击My Domains-选择你的域名后的Manage Domain</p>
+</li>
+<li>
+<p>2.注册CloudFlare账户 <a href="https://dash.cloudflare.com/sign-up">https://dash.cloudflare.com/sign-up</a></p>
+</li>
+<li>
+<p>3.输入你的域名<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd7561a5f-d8df-4303-97ba-3ff0bd913f8d%2FUntitled.png?table=block&amp;id=81796ca1-f30f-4e07-8f38-485c6fe017be&amp;cache=v2" alt="输入你的域名" loading="lazy"></p>
+</li>
+<li>
+<p>4.选择免费计划<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc732e996-769a-4362-be92-f8815c761dc3%2FUntitled.png?table=block&amp;id=12e54329-a02a-4b27-8da2-e9dc0a6c09a8&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>5.如果你没有导入任何A记录，请为域名添加一个A记录，地址可填8.8.8.8<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4ce6072e-d4e7-43d8-8088-1d0330e458f0%2FUntitled.png?table=block&amp;id=c57a6b9f-7cce-4098-bdce-18a7b4a472dd&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>6.复制以下两个DNS名称服务器<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F72f6b1c5-0226-4d47-bb9c-30d817a5d421%2FUntitled.png?table=block&amp;id=e098079a-42ae-41d1-a801-e29dea655b38&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>7.登录你的Freenom账号，点击My Domains-选择你的域名后的Manage Domain ，将上面那两个cloudflare.com结尾的地址填入对应的Nemesever1和2的位置。修改并应用。<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffcd1427c-695f-4e2b-9737-f443e6b8e9d4%2FUntitled.png?table=block&amp;id=68ce49b0-6ec7-452e-9154-429a6a28d823&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>8.等待一分钟，返回Cloudflare页面检查名称服务器</p>
+</li>
+<li>
+<p>9.选择灵活的加密模式（这样访问你的网站就会拥有一把小锁了！）<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2e9b3a65-60a5-4536-8370-aef0818cb955%2FUntitled.png?table=block&amp;id=f3d2b5f5-6850-4d3f-bfb9-4cfaf3aa33d2&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>10.始终使用 HTTPS，自动 HTTPS 重写，默认选项<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5a1027d6-e4bf-4a23-9fe4-e0a5cec61db1%2FUntitled.png?table=block&amp;id=92d47c8e-2dfb-460d-9836-41d558c689ad&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>11.完成以上设置后，cloudflare成功接管你域名的dns<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0062a94e-1056-43e7-a179-ed5573ffe099%2FUntitled.png?table=block&amp;id=f566ae17-a939-4f64-b9e1-c72417d4996f&amp;cache=v2" alt="" loading="lazy"></p>
+</li>
+</ul>
+</details>
+<hr>
+<p><strong>担心域名没有及时续期？可以看看这个:</strong><br>
+📭<a href="https://bieb13.com/freenomrenew">Freenom域名自动续期</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Freenom域名自动续期]]></title>
+        <id>https://bieb13.github.io/freenomrenew/</id>
+        <link href="https://bieb13.github.io/freenomrenew/">
+        </link>
+        <updated>2021-04-06T13:37:27.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>注册了很多Freenom的免费域名，但是担心自己的域名没有及时续期而丢失？<br>
+有个大佬在GitHub上分享了一个项目，可以帮助你实现freenom域名的自动续期。<br>
+这样理论上可以实现域名无限期免费使用。</p>
+</blockquote>
+<h2 id="项目地址">项目地址：</h2>
+<p><a href="https://github.com/luolongfei/freenom">luolongfei/freenom</a></p>
+<p>如果你和我一样，没有vps，且不会这样那样的部署，可以直接跳到🤣 项目最简单的使用方法<br>
+详细说明请看作者原文。</p>
+<h2 id="-准备">- 准备：</h2>
+<pre><code>1.一个Github账号  
+2.一个telegram账号  
+</code></pre>
+<ul>
+<li>
+<p><strong>开始</strong></p>
+<ol>
+<li>
+<p>点击<a href="https://github.com/luolongfei/freenom">该仓库地址</a> ，fork该仓库</p>
+</li>
+<li>
+<p>在你 Fork 的本仓库下的 Settings -&gt; Secrets 页面追加以下几个secret秘密环境变量</p>
+<figure data-type="image" tabindex="1"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd534e0d2-bed1-407c-b587-4688240c53d7%2FUntitled.png?table=block&amp;id=0601aa74-9eb1-49ae-93e0-bd4400c7a1b8&amp;cache=v2" alt="1.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9a49625a-30d7-4b6e-8f6a-71d7cf68bb82%2FUntitled.png?table=block&amp;id=58d6507b-199a-4d65-861a-7bec52532576&amp;cache=v2" alt="2.png" loading="lazy"></figure>
+</li>
+<li>
+<p>需要添加的变量如下：</p>
+<p><a href="https://www.notion.so/b17c0acc54e54a90afa8ac5da5dbd052">变量设置</a></p>
+<ul>
+<li>
+<p>FREENOM_USERNAME</p>
+</li>
+<li>
+<p>FREENOM_PASSWORD</p>
+</li>
+<li>
+<p>MULTIPLE_ACCOUNTS（多账户支持,若没有多个freenom账户，可不用添加）</p>
+</li>
+<li>
+<p>MAIL_ENABLE</p>
+</li>
+<li>
+<p>TELEGRAM_CHAT_ID</p>
+</li>
+<li>
+<p>TELEGRAM_BOT_TOKEN</p>
+</li>
+<li>
+<p>TELEGRAM_BOT_ENABLE</p>
+</li>
+<li>
+<p>NOTICE_FREQ</p>
+</li>
+<li>
+<p>详细介绍看下图</p>
+<figure data-type="image" tabindex="3"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2349f823-291b-40ff-be2f-abac9d1cab33%2FUntitled.png?table=block&amp;id=b8484431-93ce-4f38-bbc2-9658c032025c&amp;cache=v2" alt="3.png" loading="lazy"></figure>
+</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6bcdd80f-51fa-466f-962d-c9f97da82e6e%2FUntitled.png?table=block&amp;id=5443c1fc-dd23-4b26-904e-bbb1f7dc268e&amp;cache=v2" alt="4.png" loading="lazy"></figure>
+</li>
+<li>
+<p>上述变量添加好了以后，点击仓库上方的Action，同意启用 Actions</p>
+<figure data-type="image" tabindex="5"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1aad18e6-7316-404f-81c2-17a1edb9c5a2%2FUntitled.png?table=block&amp;id=9d7fc372-e743-4022-85cd-24bacd52d8a6&amp;cache=v2" alt="05" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F17d7b4e3-833f-4844-8f51-997e2e5b88b4%2FUntitled.png?table=block&amp;id=43742bdc-822e-4d3b-8c55-f3cd28add109&amp;cache=v2" alt="06.png" loading="lazy"></figure>
+</li>
+<li>
+<p>解除禁用</p>
+<figure data-type="image" tabindex="7"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F272b87ca-6c50-415d-831e-e9561f51d792%2FUntitled.png?table=block&amp;id=5329f923-98dc-440a-8472-f2817942bf1f&amp;cache=v2" alt="07.png" loading="lazy"></figure>
+</li>
+<li>
+<p>任意发起一次 commit，可以参考下面点击这个yml文件进行修改</p>
+<p>– 打开 点击编辑按钮</p>
+<figure data-type="image" tabindex="8"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F381dadfb-08a8-4fc1-a6fb-912f3d87ff8b%2FUntitled.png?table=block&amp;id=78dccc77-77ab-4261-ba61-4fb221acb8e8&amp;cache=v2" alt="08.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F86454548-36e4-46fd-a97c-09537292dfbc%2FUntitled.png?table=block&amp;id=236a0806-12f7-43eb-803d-684fce2e1fb1&amp;cache=v2" alt="09.png" loading="lazy"></figure>
+<p>– 修改任意内容，比如在在最后加个空格。将页面滑动到最下面，点击Commit changes</p>
+<figure data-type="image" tabindex="10"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3eb5a699-ac3c-4565-bf24-23044ef9bd43%2FUntitled.png?table=block&amp;id=ae07901b-6b8d-44c2-9b7d-afb426a88468&amp;cache=v2" alt="10.png" loading="lazy"></figure>
+</li>
+<li>
+<p>返回Actions查看执行情况。也可以选择手动触发项目执行。成功收到电报信息就代表你成功啦！</p>
+<figure data-type="image" tabindex="11"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa65f5020-f456-400e-8732-57e1fe3993bd%2FUntitled.png?table=block&amp;id=d0fe19a9-b3bf-4cdf-abac-687c0f937fd0&amp;cache=v2" alt="11.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffd297a2a-8c39-4541-a315-09b613c028da%2FUntitled.png?table=block&amp;id=656d20a6-38e1-419b-90f5-285b199e76f5&amp;cache=v2" alt="12.png" loading="lazy"></figure>
+</li>
+<li>
+<p>以上步骤完成后无需其他操作。现在每天上午十点左右Github Actions会自动触发执行本项目，注意查收电报推送信息。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="上述是我的个人简化版教程同时补充了一些些内容-一切以项目作者的文档为准">上述是我的个人简化版教程，同时补充了一些些内容。一切以项目作者的文档为准。</h3>
+<h3 id="好了愉快地完成第一次自动续期为自己鼓掌">好了，愉快地完成第一次自动续期！为自己鼓掌👏</h3>
+<p><em>转载文章请附带原文出处，谢谢</em><a href="https://bieb13.com/freenomrenew">https://bieb13.com/freenomrenew</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[利用notion免费搭建自定义域名主页]]></title>
+        <id>https://bieb13.github.io/notioncustomizepases/</id>
+        <link href="https://bieb13.github.io/notioncustomizepases/">
+        </link>
+        <updated>2021-04-06T12:57:37.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="利用notion免费搭建自定义域名主页">利用notion免费搭建自定义域名主页</h1>
+<p>该方案来自<a href="https://fruitionsite.com/771ef38657244c27b9389734a9cbff44/">Frution</a></p>
+<h3 id="10分钟即可获取拥有自己域名的主页">10分钟即可获取拥有自己域名的主页！</h3>
+<p>👉需求：在不会代码的前提下免费搭建一个自定义域名的主页</p>
+<p>✔️实现</p>
+<details><summary>准备（点击左边展开）</summary>  
+<ol>
+<li>
+<p>将自己的notion主页设置为share状态</p>
+</li>
+<li>
+<p>一个自己的域名，如果你还没有，并且想免费注册一个，<a href="https://www.notion.so/6317a1b6e622478185a2cb9dff7aada7/">请点击👉</a></p>
+</li>
+</ol>
+</details>  
+<p><strong><details><summary>开始配置CloudFlare账户（点击左边展开）：</summary></strong></p>
+<ol>
+<li>
+<p>注册账户 <a href="https://dash.cloudflare.com/sign-up">https://dash.cloudflare.com/sign-up</a></p>
+</li>
+<li>
+<p>输入你的自定义域名<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd7561a5f-d8df-4303-97ba-3ff0bd913f8d%2FUntitled.png?table=block&amp;id=4b688cb7-cf4a-4260-9f69-81dd1adbc90f&amp;cache=v2" alt="01.png" loading="lazy"></p>
+</li>
+<li>
+<p>选择免费计划<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc732e996-769a-4362-be92-f8815c761dc3%2FUntitled.png?table=block&amp;id=6b972bcd-798d-40e3-9c61-2b5fd99e9a86&amp;cache=v2" alt="02.png" loading="lazy"></p>
+</li>
+<li>
+<p>如果你没有导入任何A记录，请为域名添加一个A记录，地址可填8.8.8.8<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4ce6072e-d4e7-43d8-8088-1d0330e458f0%2FUntitled.png?table=block&amp;id=b0caaaeb-43ba-4947-bc90-e64254b3ab2c&amp;cache=v2" alt="04.png" loading="lazy"></p>
+</li>
+<li>
+<p>复制以下两个DNS名称服务器<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F72f6b1c5-0226-4d47-bb9c-30d817a5d421%2FUntitled.png?table=block&amp;id=e9a28abc-3e7b-4def-baf8-44d9c766ea15&amp;cache=v2" alt="05.png" loading="lazy"></p>
+</li>
+<li>
+<p>去你的域名提供商的后台，在域名设置中的nameservers处添加这两个名称服务器，保存。</p>
+</li>
+<li>
+<p>等待一分钟，返回Cloudflare页面检查名称服务器</p>
+</li>
+<li>
+<p>选择灵活的加密模式（这样访问你的网站就会拥有一把小锁了！）<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2e9b3a65-60a5-4536-8370-aef0818cb955%2FUntitled.png?table=block&amp;id=77d25d17-5335-4606-a9b7-a262f86a1354&amp;cache=v2" alt="08.png" loading="lazy"></p>
+</li>
+<li>
+<p>始终使用 HTTPS，反正出现的推荐配置都打勾即可</p>
+<figure data-type="image" tabindex="1"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5a1027d6-e4bf-4a23-9fe4-e0a5cec61db1%2FUntitled.png?table=block&amp;id=0830b8f9-a53b-4206-a6e8-5149868f6819&amp;cache=v2" alt="09.png" loading="lazy"></figure>
+</li>
+<li>
+<p>完成以上设置后，cloudflare成功接管你的dns<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0062a94e-1056-43e7-a179-ed5573ffe099%2FUntitled.png?table=block&amp;id=77c45d6e-1338-4be1-9923-a127d8ac6311&amp;cache=v2" alt="10.png" loading="lazy"></p>
+</li>
+<li>
+<p>点击Workers，单击管理Workers，为你的workers选择一个任意的子域名（点击创建），直接用系统默认的就行。单机设置并确认。<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F34dec507-387a-4ab8-ba05-b6995510e740%2FUntitled.png?table=block&amp;id=2821a58f-faa9-4d89-9c09-169950c76931&amp;cache=v2" alt="11.png" loading="lazy"></p>
+</li>
+<li>
+<p>选择免费计划</p>
+<figure data-type="image" tabindex="2"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff8bf34b7-63d4-4069-bfcd-0a5685907de7%2FUntitled.png?table=block&amp;id=ffe094fc-01a7-4dc4-b4f1-ba066f24b87c&amp;cache=v2" alt="12.png" loading="lazy"></figure>
+</li>
+<li>
+<p>验证邮箱。返回workers页面，点击蓝色的创建Worker按钮</p>
+<figure data-type="image" tabindex="3"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F295e133a-2cf5-4ddf-80a2-b94a04abfdb4%2FUntitled.png?table=block&amp;id=cb891703-47c2-4fae-8676-f57d6a302431&amp;cache=v2" alt="13.png" loading="lazy"></figure>
+</li>
+<li>
+<p>好了，将左边的脚本区域清空。</p>
+<figure data-type="image" tabindex="4"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F98f3b0a1-8f1e-456e-b523-bb8febf5e0ff%2FUntitled.png?table=block&amp;id=5bc0f525-98cc-425a-a470-6eed1ee6438d&amp;cache=v2" alt="14.png" loading="lazy"></figure>
+</li>
+<li>
+<p>准备好代码（这里有方便你一键输出代码的小程序）</p>
+<p><a href="https://fruition.stephenou.vercel.app">https://fruition.stephenou.vercel.app</a></p>
+<ul>
+<li>将你的域名填入上方Your Domain处</li>
+<li>将你的notion主页链接填入Notion URL中</li>
+<li>代码自动生成，点击蓝色的COPY THE CODE。代码复制成功！</li>
+</ul>
+</li>
+<li>
+<p>将代码填入第14步中的脚本框。点击保存并部署。</p>
+</li>
+<li>
+<p>保存后单击页面顶部的站点名称，转到Worker界面添加路由<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F61292ae4-5c83-4e32-97ee-355ed0c8f64c%2FUntitled.png?table=block&amp;id=6564c38a-92fb-4980-a876-a4597d9abc70&amp;cache=v2" alt="17.png" loading="lazy"></p>
+</li>
+<li>
+<p>路由输入<code>yourdomain.com/*</code> ，worker选择你刚刚创建的那个<br>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd6554895-673e-4d9f-aad4-93547dd45957%2FUntitled.png?table=block&amp;id=b3908509-43c6-4459-a37b-2a4254f40e55&amp;cache=v2" alt="18.png" loading="lazy"></p>
+</li>
+<li>
+<p>点击保存。<strong>完成了！</strong></p>
+</li>
+<li>
+<p>你现在可以访问你的域名了！</p>
+</li>
+</ol>
+</details>  
+<blockquote>
+<p>💻<br>
+其实作为网站，最重要的还是内容，如果框架再美，没有实际的内容去填充，<br>
+也只不过是徒有其表，你自己可能都忘到天边，别人又怎么会点击进去看呢？<br>
+工具始终是工具，最重要的还是使用的人如何输出内容。</p>
+</blockquote>
+<blockquote>
+<p>⚠️<br>
+值得注意的一点：<br>
+有时有些新手朋友们，常会出现，点击域名后跳到notion的登录界面的情况。<br>
+1.通常是主页share状态未开<br>
+2.主页的标题修改，导致主页链接已经发生变化，所以访问域名会跳转到notion登录界面而不显示你想要展示的主页。</p>
+</blockquote>
+<p><strong>转载请注明出处并附带此文链接，谢谢！</strong><br>
+<a href="https://bieb13.com/notioncustomizepases">https://bieb13.com/notioncustomizepases</a></p>
+]]></content>
+    </entry>
+</feed>

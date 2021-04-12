@@ -1,0 +1,254 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>一键搭建tg mtproxy | Bie哔哔</title>
+<link rel="shortcut icon" href="https://bieb13.github.io//favicon.ico?v=1618233170357">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://bieb13.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="一键搭建tg mtproxy | Bie哔哔 - Atom Feed" href="https://bieb13.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVTCT159E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VLVTCT159E');
+</script>
+
+
+    <meta name="description" content="
+前提:你得有一个vps
+
+某人白嫖谷歌云，因为自己也是新手，没怎么用gcp只是开了几台小🐔给朋友玩玩，现在只剩两个月的时间了，送的体验金还有二百多刀，用来折腾一下，顺便学习一下。
+原文仓库地址：https://github.com/el..." />
+    <meta name="keywords" content="mtproxy,tg,telegram" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://bieb13.github.io/">
+  <img class="avatar" src="https://bieb13.github.io//images/avatar.png?v=1618233170357" alt="">
+  </a>
+  <h1 class="site-title">
+    Bie哔哔
+  </h1>
+  <p class="site-description">
+    小声哔哔 放声大笑
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              一键搭建tg mtproxy
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-12
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://bieb13.github.io/-x9fGmxb7/" class="post-tag">
+                  # mtproxy
+                </a>
+              
+                <a href="https://bieb13.github.io/_HigdEkmnF/" class="post-tag">
+                  # tg
+                </a>
+              
+                <a href="https://bieb13.github.io/_MHID5H0XL/" class="post-tag">
+                  # telegram
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
+<p>前提:你得有一个vps</p>
+</blockquote>
+<p>某人白嫖谷歌云，因为自己也是新手，没怎么用gcp只是开了几台小🐔给朋友玩玩，现在只剩两个月的时间了，送的体验金还有二百多刀，用来折腾一下，顺便学习一下。</p>
+<p>原文仓库地址：<a href="https://github.com/ellermister/mtproxy">https://github.com/ellermister/mtproxy</a></p>
+<blockquote>
+<p>我的vps是utuban系统，且装了宝塔面板</p>
+</blockquote>
+<p>所以操作非常简单，连接到SSH后</p>
+<p>一键代码输入</p>
+<pre><code class="language-markdown">mkdir /home/mtproxy &amp;&amp; cd /home/mtproxy
+curl -s -o mtproxy.sh https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh &amp;&amp; chmod +x mtproxy.sh &amp;&amp; bash mtproxy.sh
+</code></pre>
+<ul>
+<li>
+<p>对了因为我装了宝塔面板，所以默认的443和8888端口已经被占用，所以要记得在宝塔-安全里 新增两个端口放行，备注方便自己记忆就行(端口一会儿会用到)</p>
+</li>
+<li>
+<p>根据提示选择输入指定 端口(刚刚放行的端口)</p>
+</li>
+<li>
+<p>如果没有特殊需求，一路默认下去就行</p>
+</li>
+<li>
+<p>当当当！成功安装并且运行（下图是脚本作者图例）</p>
+<figure data-type="image" tabindex="1"><img src="https://besthope.ml/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F801fbedb-ea67-4afc-b8f8-b90ee515fb22%2FUntitled.png?table=block&amp;id=49a37f30-78db-4a84-ae36-d3302cc6b6a0&amp;width=1440&amp;userId=&amp;cache=v2" alt="01.png" loading="lazy"></figure>
+</li>
+<li>
+<p>如果想卸载也非常简单 直接rm 该文件的所在目录即可</p>
+</li>
+<li>
+<p>我输出后的链接，发现无法直接使用的，然后发现去tg代理里手动添加即可，把主机IP地址，端口填写进去，MTProxy Secrect填进去。成功保存，连接，分享。完美</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://besthope.ml/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2f8eab90-464a-4f5e-991d-e8475d2131a8%2FUntitled.png?table=block&amp;id=0666b26f-962c-45ed-ac52-2e514da08fa2&amp;width=970&amp;userId=&amp;cache=v2" alt="02.png" loading="lazy"></figure>
+<ul>
+<li>🥰</li>
+<li><em>转载请附带原文链接 谢谢</em> <a href="https://bieb13.com/mtproxy">https://bieb13.com/mtproxy</a></li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://bieb13.github.io/gitalkinnob/">
+              <h3 class="post-title">
+                超简单在Nobelium添加Gitalk评论系统
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c50672b6f30ceb584942',
+    clientSecret: 'ca38bddd2a030f421e292bfb7f21fd7345bcb2fd',
+    repo: 'gride',
+    owner: 'bieb13',
+    admin: ['bieb13'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Made by <a href="https://github.com/bieb13/bieb13"_blank">Bieb13</a>
+  <a class="rss" href="https://bieb13.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

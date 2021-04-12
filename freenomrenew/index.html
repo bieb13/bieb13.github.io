@@ -1,0 +1,313 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Freenom域名自动续期 | Bie哔哔</title>
+<link rel="shortcut icon" href="https://bieb13.github.io//favicon.ico?v=1618233170357">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://bieb13.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Freenom域名自动续期 | Bie哔哔 - Atom Feed" href="https://bieb13.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVTCT159E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VLVTCT159E');
+</script>
+
+
+    <meta name="description" content="
+注册了很多Freenom的免费域名，但是担心自己的域名没有及时续期而丢失？
+有个大佬在GitHub上分享了一个项目，可以帮助你实现freenom域名的自动续期。
+这样理论上可以实现域名无限期免费使用。
+
+项目地址：
+luolongfei/..." />
+    <meta name="keywords" content="freenom" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://bieb13.github.io/">
+  <img class="avatar" src="https://bieb13.github.io//images/avatar.png?v=1618233170357" alt="">
+  </a>
+  <h1 class="site-title">
+    Bie哔哔
+  </h1>
+  <p class="site-description">
+    小声哔哔 放声大笑
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Freenom域名自动续期
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-06
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://bieb13.github.io/FGOyP7eUv/" class="post-tag">
+                  # freenom
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
+<p>注册了很多Freenom的免费域名，但是担心自己的域名没有及时续期而丢失？<br>
+有个大佬在GitHub上分享了一个项目，可以帮助你实现freenom域名的自动续期。<br>
+这样理论上可以实现域名无限期免费使用。</p>
+</blockquote>
+<h2 id="项目地址">项目地址：</h2>
+<p><a href="https://github.com/luolongfei/freenom">luolongfei/freenom</a></p>
+<p>如果你和我一样，没有vps，且不会这样那样的部署，可以直接跳到🤣 项目最简单的使用方法<br>
+详细说明请看作者原文。</p>
+<h2 id="-准备">- 准备：</h2>
+<pre><code>1.一个Github账号  
+2.一个telegram账号  
+</code></pre>
+<ul>
+<li>
+<p><strong>开始</strong></p>
+<ol>
+<li>
+<p>点击<a href="https://github.com/luolongfei/freenom">该仓库地址</a> ，fork该仓库</p>
+</li>
+<li>
+<p>在你 Fork 的本仓库下的 Settings -&gt; Secrets 页面追加以下几个secret秘密环境变量</p>
+<figure data-type="image" tabindex="1"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd534e0d2-bed1-407c-b587-4688240c53d7%2FUntitled.png?table=block&amp;id=0601aa74-9eb1-49ae-93e0-bd4400c7a1b8&amp;cache=v2" alt="1.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9a49625a-30d7-4b6e-8f6a-71d7cf68bb82%2FUntitled.png?table=block&amp;id=58d6507b-199a-4d65-861a-7bec52532576&amp;cache=v2" alt="2.png" loading="lazy"></figure>
+</li>
+<li>
+<p>需要添加的变量如下：</p>
+<p><a href="https://www.notion.so/b17c0acc54e54a90afa8ac5da5dbd052">变量设置</a></p>
+<ul>
+<li>
+<p>FREENOM_USERNAME</p>
+</li>
+<li>
+<p>FREENOM_PASSWORD</p>
+</li>
+<li>
+<p>MULTIPLE_ACCOUNTS（多账户支持,若没有多个freenom账户，可不用添加）</p>
+</li>
+<li>
+<p>MAIL_ENABLE</p>
+</li>
+<li>
+<p>TELEGRAM_CHAT_ID</p>
+</li>
+<li>
+<p>TELEGRAM_BOT_TOKEN</p>
+</li>
+<li>
+<p>TELEGRAM_BOT_ENABLE</p>
+</li>
+<li>
+<p>NOTICE_FREQ</p>
+</li>
+<li>
+<p>详细介绍看下图</p>
+<figure data-type="image" tabindex="3"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2349f823-291b-40ff-be2f-abac9d1cab33%2FUntitled.png?table=block&amp;id=b8484431-93ce-4f38-bbc2-9658c032025c&amp;cache=v2" alt="3.png" loading="lazy"></figure>
+</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6bcdd80f-51fa-466f-962d-c9f97da82e6e%2FUntitled.png?table=block&amp;id=5443c1fc-dd23-4b26-904e-bbb1f7dc268e&amp;cache=v2" alt="4.png" loading="lazy"></figure>
+</li>
+<li>
+<p>上述变量添加好了以后，点击仓库上方的Action，同意启用 Actions</p>
+<figure data-type="image" tabindex="5"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1aad18e6-7316-404f-81c2-17a1edb9c5a2%2FUntitled.png?table=block&amp;id=9d7fc372-e743-4022-85cd-24bacd52d8a6&amp;cache=v2" alt="05" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F17d7b4e3-833f-4844-8f51-997e2e5b88b4%2FUntitled.png?table=block&amp;id=43742bdc-822e-4d3b-8c55-f3cd28add109&amp;cache=v2" alt="06.png" loading="lazy"></figure>
+</li>
+<li>
+<p>解除禁用</p>
+<figure data-type="image" tabindex="7"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F272b87ca-6c50-415d-831e-e9561f51d792%2FUntitled.png?table=block&amp;id=5329f923-98dc-440a-8472-f2817942bf1f&amp;cache=v2" alt="07.png" loading="lazy"></figure>
+</li>
+<li>
+<p>任意发起一次 commit，可以参考下面点击这个yml文件进行修改</p>
+<p>– 打开 点击编辑按钮</p>
+<figure data-type="image" tabindex="8"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F381dadfb-08a8-4fc1-a6fb-912f3d87ff8b%2FUntitled.png?table=block&amp;id=78dccc77-77ab-4261-ba61-4fb221acb8e8&amp;cache=v2" alt="08.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F86454548-36e4-46fd-a97c-09537292dfbc%2FUntitled.png?table=block&amp;id=236a0806-12f7-43eb-803d-684fce2e1fb1&amp;cache=v2" alt="09.png" loading="lazy"></figure>
+<p>– 修改任意内容，比如在在最后加个空格。将页面滑动到最下面，点击Commit changes</p>
+<figure data-type="image" tabindex="10"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3eb5a699-ac3c-4565-bf24-23044ef9bd43%2FUntitled.png?table=block&amp;id=ae07901b-6b8d-44c2-9b7d-afb426a88468&amp;cache=v2" alt="10.png" loading="lazy"></figure>
+</li>
+<li>
+<p>返回Actions查看执行情况。也可以选择手动触发项目执行。成功收到电报信息就代表你成功啦！</p>
+<figure data-type="image" tabindex="11"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa65f5020-f456-400e-8732-57e1fe3993bd%2FUntitled.png?table=block&amp;id=d0fe19a9-b3bf-4cdf-abac-687c0f937fd0&amp;cache=v2" alt="11.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffd297a2a-8c39-4541-a315-09b613c028da%2FUntitled.png?table=block&amp;id=656d20a6-38e1-419b-90f5-285b199e76f5&amp;cache=v2" alt="12.png" loading="lazy"></figure>
+</li>
+<li>
+<p>以上步骤完成后无需其他操作。现在每天上午十点左右Github Actions会自动触发执行本项目，注意查收电报推送信息。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="上述是我的个人简化版教程同时补充了一些些内容-一切以项目作者的文档为准">上述是我的个人简化版教程，同时补充了一些些内容。一切以项目作者的文档为准。</h3>
+<h3 id="好了愉快地完成第一次自动续期为自己鼓掌">好了，愉快地完成第一次自动续期！为自己鼓掌👏</h3>
+<p><em>转载文章请附带原文出处，谢谢</em><a href="https://bieb13.com/freenomrenew">https://bieb13.com/freenomrenew</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80">项目地址：</a></li>
+<li><a href="#-%E5%87%86%E5%A4%87">- 准备：</a>
+<ul>
+<li><a href="#%E4%B8%8A%E8%BF%B0%E6%98%AF%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8C%96%E7%89%88%E6%95%99%E7%A8%8B%E5%90%8C%E6%97%B6%E8%A1%A5%E5%85%85%E4%BA%86%E4%B8%80%E4%BA%9B%E4%BA%9B%E5%86%85%E5%AE%B9-%E4%B8%80%E5%88%87%E4%BB%A5%E9%A1%B9%E7%9B%AE%E4%BD%9C%E8%80%85%E7%9A%84%E6%96%87%E6%A1%A3%E4%B8%BA%E5%87%86">上述是我的个人简化版教程，同时补充了一些些内容。一切以项目作者的文档为准。</a></li>
+<li><a href="#%E5%A5%BD%E4%BA%86%E6%84%89%E5%BF%AB%E5%9C%B0%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%87%AA%E5%8A%A8%E7%BB%AD%E6%9C%9F%E4%B8%BA%E8%87%AA%E5%B7%B1%E9%BC%93%E6%8E%8C">好了，愉快地完成第一次自动续期！为自己鼓掌👏</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://bieb13.github.io/notioncustomizepases/">
+              <h3 class="post-title">
+                利用notion免费搭建自定义域名主页
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c50672b6f30ceb584942',
+    clientSecret: 'ca38bddd2a030f421e292bfb7f21fd7345bcb2fd',
+    repo: 'gride',
+    owner: 'bieb13',
+    admin: ['bieb13'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Made by <a href="https://github.com/bieb13/bieb13"_blank">Bieb13</a>
+  <a class="rss" href="https://bieb13.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
