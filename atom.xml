@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bieb13.github.io/</id>
     <title>Bie哔哔</title>
-    <updated>2021-04-12T13:13:01.629Z</updated>
+    <updated>2021-04-12T13:16:11.516Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bieb13.github.io/"/>
     <link rel="self" href="https://bieb13.github.io/atom.xml"/>
@@ -22,7 +22,7 @@
 <p>某人白嫖谷歌云，因为自己也是新手，没怎么用gcp只是开了几台小🐔给朋友玩玩，现在只剩两个月的时间了，送的体验金还有二百多刀，用来折腾一下，顺便学习一下。</p>
 <p>原文仓库地址：<a href="https://github.com/ellermister/mtproxy">https://github.com/ellermister/mtproxy</a></p>
 <blockquote>
-<p>我的vps是utuban系统，且装了宝塔面板</p>
+<p>我的vps是ubuntu系统，且装了宝塔面板</p>
 </blockquote>
 <p>所以操作非常简单，连接到SSH后</p>
 <p>一键代码输入</p>
